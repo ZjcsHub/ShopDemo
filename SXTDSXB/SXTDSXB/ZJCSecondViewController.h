@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZJCSecondViewController.h
 //  SXTDSXB
 //
 //  Created by 赵继超 on 16/8/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZJCSecondViewController : UIViewController
 
 @end
-

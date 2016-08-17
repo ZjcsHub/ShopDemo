@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		07D746391D63F76A00966A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746381D63F76A00966A7B /* main.m */; };
 		07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7463B1D63F76A00966A7B /* AppDelegate.m */; };
-		07D7463F1D63F76A00966A7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7463E1D63F76A00966A7B /* ViewController.m */; };
-		07D746421D63F76A00966A7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D746401D63F76A00966A7B /* Main.storyboard */; };
 		07D746441D63F76A00966A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D746431D63F76A00966A7B /* Assets.xcassets */; };
 		07D746471D63F76A00966A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D746451D63F76A00966A7B /* LaunchScreen.storyboard */; };
 		07D746521D63F76B00966A7B /* SXTDSXBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746511D63F76B00966A7B /* SXTDSXBTests.m */; };
 		07D7465D1D63F76B00966A7B /* SXTDSXBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7465C1D63F76B00966A7B /* SXTDSXBUITests.m */; };
+		07D7466C1D6439ED00966A7B /* ZJCTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7466B1D6439ED00966A7B /* ZJCTimeViewController.m */; };
+		07D7466F1D643A3000966A7B /* ZJCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7466E1D643A3000966A7B /* ZJCSecondViewController.m */; };
+		07D746721D643A3B00966A7B /* ZJCThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746711D643A3B00966A7B /* ZJCThirdViewController.m */; };
+		07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746741D643A4600966A7B /* ZJCFourthViewController.m */; };
+		07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746771D643F5000966A7B /* ZJCTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +42,6 @@
 		07D746381D63F76A00966A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D7463A1D63F76A00966A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07D7463B1D63F76A00966A7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07D7463D1D63F76A00966A7B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		07D7463E1D63F76A00966A7B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		07D746411D63F76A00966A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07D746431D63F76A00966A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D746461D63F76A00966A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D746481D63F76A00966A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +51,16 @@
 		07D746581D63F76B00966A7B /* SXTDSXBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXTDSXBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D7465C1D63F76B00966A7B /* SXTDSXBUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXTDSXBUITests.m; sourceTree = "<group>"; };
 		07D7465E1D63F76B00966A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07D7466A1D6439ED00966A7B /* ZJCTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCTimeViewController.h; sourceTree = "<group>"; };
+		07D7466B1D6439ED00966A7B /* ZJCTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCTimeViewController.m; sourceTree = "<group>"; };
+		07D7466D1D643A3000966A7B /* ZJCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCSecondViewController.h; sourceTree = "<group>"; };
+		07D7466E1D643A3000966A7B /* ZJCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCSecondViewController.m; sourceTree = "<group>"; };
+		07D746701D643A3B00966A7B /* ZJCThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCThirdViewController.h; sourceTree = "<group>"; };
+		07D746711D643A3B00966A7B /* ZJCThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCThirdViewController.m; sourceTree = "<group>"; };
+		07D746731D643A4600966A7B /* ZJCFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCFourthViewController.h; sourceTree = "<group>"; };
+		07D746741D643A4600966A7B /* ZJCFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCFourthViewController.m; sourceTree = "<group>"; };
+		07D746761D643F5000966A7B /* ZJCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCTabBarViewController.h; sourceTree = "<group>"; };
+		07D746771D643F5000966A7B /* ZJCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +113,16 @@
 			children = (
 				07D7463A1D63F76A00966A7B /* AppDelegate.h */,
 				07D7463B1D63F76A00966A7B /* AppDelegate.m */,
-				07D7463D1D63F76A00966A7B /* ViewController.h */,
-				07D7463E1D63F76A00966A7B /* ViewController.m */,
-				07D746401D63F76A00966A7B /* Main.storyboard */,
+				07D746761D643F5000966A7B /* ZJCTabBarViewController.h */,
+				07D746771D643F5000966A7B /* ZJCTabBarViewController.m */,
+				07D7466A1D6439ED00966A7B /* ZJCTimeViewController.h */,
+				07D7466B1D6439ED00966A7B /* ZJCTimeViewController.m */,
+				07D7466D1D643A3000966A7B /* ZJCSecondViewController.h */,
+				07D7466E1D643A3000966A7B /* ZJCSecondViewController.m */,
+				07D746701D643A3B00966A7B /* ZJCThirdViewController.h */,
+				07D746711D643A3B00966A7B /* ZJCThirdViewController.m */,
+				07D746731D643A4600966A7B /* ZJCFourthViewController.h */,
+				07D746741D643A4600966A7B /* ZJCFourthViewController.m */,
 				07D746431D63F76A00966A7B /* Assets.xcassets */,
 				07D746451D63F76A00966A7B /* LaunchScreen.storyboard */,
 				07D746481D63F76A00966A7B /* Info.plist */,
@@ -202,6 +219,7 @@
 		07D7462C1D63F76A00966A7B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZJC;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "赵继超";
 				TargetAttributes = {
@@ -245,7 +263,6 @@
 			files = (
 				07D746471D63F76A00966A7B /* LaunchScreen.storyboard in Resources */,
 				07D746441D63F76A00966A7B /* Assets.xcassets in Resources */,
-				07D746421D63F76A00966A7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D7463F1D63F76A00966A7B /* ViewController.m in Sources */,
+				07D746721D643A3B00966A7B /* ZJCThirdViewController.m in Sources */,
+				07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */,
+				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,
 				07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */,
+				07D7466F1D643A3000966A7B /* ZJCSecondViewController.m in Sources */,
 				07D746391D63F76A00966A7B /* main.m in Sources */,
+				07D7466C1D6439ED00966A7B /* ZJCTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		07D746401D63F76A00966A7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07D746411D63F76A00966A7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07D746451D63F76A00966A7B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -498,6 +511,7 @@
 				07D746631D63F76B00966A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07D746641D63F76B00966A7B /* Build configuration list for PBXNativeTarget "SXTDSXBTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +520,7 @@
 				07D746661D63F76B00966A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07D746671D63F76B00966A7B /* Build configuration list for PBXNativeTarget "SXTDSXBUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +529,7 @@
 				07D746691D63F76B00966A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
