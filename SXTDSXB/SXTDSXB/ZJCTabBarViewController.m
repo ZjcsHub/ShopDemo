@@ -11,6 +11,7 @@
 #import "ZJCSecondViewController.h"
 #import "ZJCThirdViewController.h"
 #import "ZJCFourthViewController.h"
+#import "ZJCNavViewController.h"
 @interface ZJCTabBarViewController ()
 
 @end
@@ -26,24 +27,28 @@
     ZJCTimeViewController * time =[[ZJCTimeViewController alloc] init];
     time.tabBarItem.image =[UIImage imageNamed:@"菜单栏限时特卖按钮未选中状态"];
     time.tabBarItem.selectedImage =[UIImage imageNamed:@"菜单栏限时特卖按钮选中状态"];
+    ZJCNavViewController * nav1 =[[ZJCNavViewController alloc] initWithRootViewController:time];
     time.title =@"限时购";
     
     ZJCSecondViewController * second = [[ZJCSecondViewController alloc] init];
     second.tabBarItem.image =[UIImage imageNamed:@"菜单栏分类按钮未选中状态"];
     second.tabBarItem.selectedImage =[UIImage imageNamed:@"菜单栏分类按钮选中状态"];
+    ZJCNavViewController * nav2 =[[ZJCNavViewController alloc] initWithRootViewController:second];
     second.title =@"分类";
     
     ZJCThirdViewController * third = [[ZJCThirdViewController alloc] init];
     third.tabBarItem.image =[UIImage imageNamed:@"菜单栏购物车按钮未选中状态"];
     third.tabBarItem.selectedImage =[UIImage imageNamed:@"菜单栏购物车按钮选中状态"];
+    ZJCNavViewController * nav3 =[[ZJCNavViewController alloc] initWithRootViewController:third];
     third.title =@"购物车";
     
     ZJCFourthViewController * fourth =[[ZJCFourthViewController alloc] init];
     fourth.tabBarItem.image =[UIImage imageNamed:@"菜单栏我的按钮未选中状态"];
     fourth.tabBarItem.selectedImage =[UIImage imageNamed:@"菜单栏我的按钮选中状态"];
+    ZJCNavViewController * nav4 =[[ZJCNavViewController alloc] initWithRootViewController:fourth];
     fourth.title =@"我";
     
-    self.viewControllers =@[time,second,third,fourth];
+    self.viewControllers =@[nav1,nav2,nav3,nav4];
 
 }
 

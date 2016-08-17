@@ -18,6 +18,7 @@
 		07D746721D643A3B00966A7B /* ZJCThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746711D643A3B00966A7B /* ZJCThirdViewController.m */; };
 		07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746741D643A4600966A7B /* ZJCFourthViewController.m */; };
 		07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746771D643F5000966A7B /* ZJCTabBarViewController.m */; };
+		07E5EE6E1D64544400E2E9F1 /* ZJCNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		07D746741D643A4600966A7B /* ZJCFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCFourthViewController.m; sourceTree = "<group>"; };
 		07D746761D643F5000966A7B /* ZJCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCTabBarViewController.h; sourceTree = "<group>"; };
 		07D746771D643F5000966A7B /* ZJCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCTabBarViewController.m; sourceTree = "<group>"; };
+		07E5EE6C1D64544400E2E9F1 /* ZJCNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCNavViewController.h; sourceTree = "<group>"; };
+		07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCNavViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				07D7463B1D63F76A00966A7B /* AppDelegate.m */,
 				07D746761D643F5000966A7B /* ZJCTabBarViewController.h */,
 				07D746771D643F5000966A7B /* ZJCTabBarViewController.m */,
+				07E5EE6C1D64544400E2E9F1 /* ZJCNavViewController.h */,
+				07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */,
 				07D7466A1D6439ED00966A7B /* ZJCTimeViewController.h */,
 				07D7466B1D6439ED00966A7B /* ZJCTimeViewController.m */,
 				07D7466D1D643A3000966A7B /* ZJCSecondViewController.h */,
@@ -291,6 +296,7 @@
 				07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */,
 				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,
 				07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */,
+				07E5EE6E1D64544400E2E9F1 /* ZJCNavViewController.m in Sources */,
 				07D7466F1D643A3000966A7B /* ZJCSecondViewController.m in Sources */,
 				07D746391D63F76A00966A7B /* main.m in Sources */,
 				07D7466C1D6439ED00966A7B /* ZJCTimeViewController.m in Sources */,
