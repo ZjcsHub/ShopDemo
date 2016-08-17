@@ -19,6 +19,9 @@
 		07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746741D643A4600966A7B /* ZJCFourthViewController.m */; };
 		07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746771D643F5000966A7B /* ZJCTabBarViewController.m */; };
 		07E5EE6E1D64544400E2E9F1 /* ZJCNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */; };
+		07E5EE761D64657A00E2E9F1 /* ZJCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E5EE751D64657A00E2E9F1 /* ZJCTableViewCell.m */; };
+		07E5EE791D646C7300E2E9F1 /* ZJCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E5EE781D646C7300E2E9F1 /* ZJCHeaderView.m */; };
+		07E5EE7C1D64798900E2E9F1 /* ZJCtableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E5EE7B1D64798900E2E9F1 /* ZJCtableView.m */; };
 		58BA11D3F01959A566E17F51 /* libPods-SXTDSXBUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 675E48D26F3E81DA76EBAEA5 /* libPods-SXTDSXBUITests.a */; };
 		97DA2FF76230C47E1B897C58 /* libPods-SXTDSXBTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA02DEF7F33452A8248B7F6B /* libPods-SXTDSXBTests.a */; };
 		AFCCC79344D486F9FA6BD872 /* libPods-SXTDSXB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB12314404AC9A2E5867C8BF /* libPods-SXTDSXB.a */; };
@@ -67,6 +70,13 @@
 		07D746771D643F5000966A7B /* ZJCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCTabBarViewController.m; sourceTree = "<group>"; };
 		07E5EE6C1D64544400E2E9F1 /* ZJCNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCNavViewController.h; sourceTree = "<group>"; };
 		07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCNavViewController.m; sourceTree = "<group>"; };
+		07E5EE741D64657A00E2E9F1 /* ZJCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCTableViewCell.h; sourceTree = "<group>"; };
+		07E5EE751D64657A00E2E9F1 /* ZJCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCTableViewCell.m; sourceTree = "<group>"; };
+		07E5EE771D646C7300E2E9F1 /* ZJCHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCHeaderView.h; sourceTree = "<group>"; };
+		07E5EE781D646C7300E2E9F1 /* ZJCHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCHeaderView.m; sourceTree = "<group>"; };
+		07E5EE7A1D64798900E2E9F1 /* ZJCtableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCtableView.h; sourceTree = "<group>"; };
+		07E5EE7B1D64798900E2E9F1 /* ZJCtableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCtableView.m; sourceTree = "<group>"; };
+		07E5EE7D1D647A4100E2E9F1 /* ZJCHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJCHeader.pch; sourceTree = "<group>"; };
 		3F3322031EF192AF2CAFF263 /* Pods-SXTDSXBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXTDSXBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SXTDSXBTests/Pods-SXTDSXBTests.release.xcconfig"; sourceTree = "<group>"; };
 		675E48D26F3E81DA76EBAEA5 /* libPods-SXTDSXBUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SXTDSXBUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		707C736BC282DCA10677EE8A /* Pods-SXTDSXBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXTDSXBUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SXTDSXBUITests/Pods-SXTDSXBUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +155,7 @@
 				07D746451D63F76A00966A7B /* LaunchScreen.storyboard */,
 				07D746481D63F76A00966A7B /* Info.plist */,
 				07D746371D63F76A00966A7B /* Supporting Files */,
+				07E5EE7D1D647A4100E2E9F1 /* ZJCHeader.pch */,
 			);
 			path = SXTDSXB;
 			sourceTree = "<group>";
@@ -207,8 +218,22 @@
 			children = (
 				07D746731D643A4600966A7B /* ZJCFourthViewController.h */,
 				07D746741D643A4600966A7B /* ZJCFourthViewController.m */,
+				07E5EE731D645AD900E2E9F1 /* View */,
 			);
 			name = "我";
+			sourceTree = "<group>";
+		};
+		07E5EE731D645AD900E2E9F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07E5EE741D64657A00E2E9F1 /* ZJCTableViewCell.h */,
+				07E5EE751D64657A00E2E9F1 /* ZJCTableViewCell.m */,
+				07E5EE7A1D64798900E2E9F1 /* ZJCtableView.h */,
+				07E5EE7B1D64798900E2E9F1 /* ZJCtableView.m */,
+				07E5EE771D646C7300E2E9F1 /* ZJCHeaderView.h */,
+				07E5EE781D646C7300E2E9F1 /* ZJCHeaderView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		5C82FD283854AE96707448EC /* Frameworks */ = {
@@ -496,13 +521,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D746721D643A3B00966A7B /* ZJCThirdViewController.m in Sources */,
+				07E5EE761D64657A00E2E9F1 /* ZJCTableViewCell.m in Sources */,
 				07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */,
 				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,
 				07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */,
 				07E5EE6E1D64544400E2E9F1 /* ZJCNavViewController.m in Sources */,
 				07D7466F1D643A3000966A7B /* ZJCSecondViewController.m in Sources */,
 				07D746391D63F76A00966A7B /* main.m in Sources */,
+				07E5EE7C1D64798900E2E9F1 /* ZJCtableView.m in Sources */,
 				07D7466C1D6439ED00966A7B /* ZJCTimeViewController.m in Sources */,
+				07E5EE791D646C7300E2E9F1 /* ZJCHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SXTDSXB/ZJCHeader.pch";
 				INFOPLIST_FILE = SXTDSXB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.SXTDSXB";
@@ -650,6 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SXTDSXB/ZJCHeader.pch";
 				INFOPLIST_FILE = SXTDSXB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.SXTDSXB";

@@ -7,16 +7,54 @@
 //
 
 #import "ZJCFourthViewController.h"
-
+#import <Masonry.h>
+#import "ZJCHeaderView.h"
+#import "ZJCtableView.h"
 @interface ZJCFourthViewController ()
+
+@property (nonatomic, strong) ZJCHeaderView * headView;
+
+@property (nonatomic, strong) ZJCtableView * tableView;
 
 @end
 
 @implementation ZJCFourthViewController
 
+- (ZJCtableView *)tableView{
+    if (!_tableView) {
+        _tableView =[[ZJCtableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10) style:UITableViewStylePlain];
+        _tableView.backgroundColor =[UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.00];
+        _tableView.bounces =NO;
+        _tableView.tableFooterView =[[UIView alloc] init];
+    }
+    return _tableView;
+}
+
+-(ZJCHeaderView *)headView{
+    if (!_headView) {
+        _headView =[[ZJCHeaderView alloc] init];
+    }
+    return _headView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor =[UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.00];
+    self.edgesForExtendedLayout = 0;
+    [self.view addSubview:self.headView];
+    [self.view addSubview:self.tableView];
+ 
+    __weak typeof (self) weakself =self;
+    [self.headView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.equalTo(weakself.view);
+        make.height.equalTo(@125);
+    }];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.headView.mas_bottom).offset(35);
+        make.left.right.bottom.equalTo(weakself.view);
+    }];
+       
+    
 }
 
 - (void)didReceiveMemoryWarning {
