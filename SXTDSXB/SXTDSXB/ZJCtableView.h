@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ZJCtableView : UITableView
+@property (nonatomic ,strong) NSMutableArray * datalist;
+
+@property (nonatomic ,strong) NSMutableArray * imageArray;
+
 
 @end

@@ -10,4 +10,6 @@
 
 @interface ZJCFourthViewController : UIViewController
 
+- (void)doAction;
+
 @end

@@ -56,12 +56,13 @@
         [self addSubview:self.namelabel];
         [self addSubview:self.nextimage];
         [self addSubview:self.linelabel];
+        [self make];
+        
     }
     return self;
 }
 
-- (void)layoutSubviews{
-
+- (void)make{
     __weak typeof (self) weakself =self;
     [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.mas_centerY);
@@ -70,7 +71,7 @@
     }];
     [_namelabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.mas_centerY);
-        make.size.mas_equalTo(CGSizeMake(60, weakself.frame.size.height));
+        make.size.mas_equalTo(CGSizeMake(130, weakself.frame.size.height));
         make.left.equalTo(weakself.iconView.mas_right).offset(15);
     }];
     [_linelabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -84,7 +85,10 @@
         make.right.equalTo(@-15);
         make.size.mas_equalTo(CGSizeMake(20, 20));
     }];
+
 }
+
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

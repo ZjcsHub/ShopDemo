@@ -8,15 +8,14 @@
 
 #import "ZJCtableView.h"
 #import "ZJCTableViewCell.h"
-
+#import "ZJCHeaderView.h"
 @interface ZJCtableView ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic ,strong) NSMutableArray * datalist;
 
-@property (nonatomic ,strong) NSMutableArray * imageArray;
 @end
 
 @implementation ZJCtableView
+
 
 - (NSMutableArray *)datalist{
     if (!_datalist) {
@@ -40,9 +39,12 @@
     if (self =[super initWithFrame:frame style:style]) {
         self.delegate =self;
         self.dataSource =self;
+//        [self.datalist addObjectsFromArray:@[@"我的优惠劵",@"邀请好友,一块赚钱"]];
+//        [self.imageArray addObjectsFromArray:@[[UIImage imageNamed:@"我的界面我的优惠券图标"],[UIImage imageNamed:@"我的界面邀请好友图标"]]];
     }
     return self;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.datalist.count;

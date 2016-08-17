@@ -7,7 +7,7 @@
 //
 
 #import "ZJCHeaderView.h"
-
+#import "ZJCFourthViewController.h"
 @interface ZJCHeaderView ()
 @property (nonatomic ,strong) UIImageView * imageView;
 
@@ -58,6 +58,7 @@
     if (!_longin) {
         _longin =[UIButton buttonWithType:UIButtonTypeSystem];
         [_longin setTitle:@"登录" forState:UIControlStateNormal];
+        [_longin addTarget:self action:@selector(doAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _longin;
 }
@@ -69,5 +70,19 @@
     }
     return _zhuce;
 }
+
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    
+    
+    if (aSelector == @selector(doAction)) {
+        
+        return  [[ZJCFourthViewController alloc] init];
+        
+    }
+    
+    return nil;
+}
+
 
 @end

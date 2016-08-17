@@ -26,6 +26,7 @@
         _tableView.backgroundColor =[UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.00];
         _tableView.bounces =NO;
         _tableView.tableFooterView =[[UIView alloc] init];
+        
     }
     return _tableView;
 }
@@ -55,6 +56,13 @@
     }];
        
     
+}
+
+- (void)doAction{
+    [self.tableView.datalist addObjectsFromArray:@[@"我的优惠劵",@"邀请好友,一块赚钱"]];
+    [self.tableView.imageArray addObjectsFromArray:@[[UIImage imageNamed:@"我的界面我的优惠券图标"],[UIImage imageNamed:@"我的界面邀请好友图标"]]];
+    [self.tableView reloadData];
+    [self.navigationController reloadInputViews];
 }
 
 - (void)didReceiveMemoryWarning {
