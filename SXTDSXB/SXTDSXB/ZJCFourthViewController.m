@@ -38,6 +38,7 @@
         __weak typeof (self) weakself =self;
         _headView.pushblock =^{
             [weakself.navigationController pushViewController:[[ZJCLandView alloc] init] animated:YES];
+
         };
     }
     return _headView;
