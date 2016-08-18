@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-
+typedef void (^PushBlock)();
 
 @interface ZJCHeaderView : UIView
 
-
+@property (nonatomic,copy) PushBlock pushblock;
 @end

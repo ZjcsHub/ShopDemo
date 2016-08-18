@@ -10,6 +10,7 @@
 #import <Masonry.h>
 #import "ZJCHeaderView.h"
 #import "ZJCtableView.h"
+#import "ZJCLandView.h"
 @interface ZJCFourthViewController ()
 
 @property (nonatomic, strong) ZJCHeaderView * headView;
@@ -34,6 +35,10 @@
 -(ZJCHeaderView *)headView{
     if (!_headView) {
         _headView =[[ZJCHeaderView alloc] init];
+        __weak typeof (self) weakself =self;
+        _headView.pushblock =^{
+            [weakself.navigationController pushViewController:[[ZJCLandView alloc] init] animated:YES];
+        };
     }
     return _headView;
 }
@@ -58,12 +63,6 @@
     
 }
 
-- (void)doAction{
-    [self.tableView.datalist addObjectsFromArray:@[@"我的优惠劵",@"邀请好友,一块赚钱"]];
-    [self.tableView.imageArray addObjectsFromArray:@[[UIImage imageNamed:@"我的界面我的优惠券图标"],[UIImage imageNamed:@"我的界面邀请好友图标"]]];
-    [self.tableView reloadData];
-    [self.navigationController reloadInputViews];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

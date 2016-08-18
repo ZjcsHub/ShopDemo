@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0779D9231D6543E4008E78AD /* ZJCLandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779D9221D6543E4008E78AD /* ZJCLandView.m */; };
 		07D746391D63F76A00966A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746381D63F76A00966A7B /* main.m */; };
 		07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7463B1D63F76A00966A7B /* AppDelegate.m */; };
 		07D746441D63F76A00966A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D746431D63F76A00966A7B /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0779D9211D6543E4008E78AD /* ZJCLandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCLandView.h; sourceTree = "<group>"; };
+		0779D9221D6543E4008E78AD /* ZJCLandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCLandView.m; sourceTree = "<group>"; };
 		07D746341D63F76A00966A7B /* SXTDSXB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXTDSXB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D746381D63F76A00966A7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D7463A1D63F76A00966A7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0779D9201D6543B6008E78AD /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				0779D9211D6543E4008E78AD /* ZJCLandView.h */,
+				0779D9221D6543E4008E78AD /* ZJCLandView.m */,
+			);
+			name = "注册";
+			sourceTree = "<group>";
+		};
 		07D7462B1D63F76A00966A7B = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		07D746361D63F76A00966A7B /* SXTDSXB */ = {
 			isa = PBXGroup;
 			children = (
+				0779D9201D6543B6008E78AD /* 注册 */,
 				07D7463A1D63F76A00966A7B /* AppDelegate.h */,
 				07D7463B1D63F76A00966A7B /* AppDelegate.m */,
 				07D746761D643F5000966A7B /* ZJCTabBarViewController.h */,
@@ -521,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D746721D643A3B00966A7B /* ZJCThirdViewController.m in Sources */,
+				0779D9231D6543E4008E78AD /* ZJCLandView.m in Sources */,
 				07E5EE761D64657A00E2E9F1 /* ZJCTableViewCell.m in Sources */,
 				07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */,
 				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,

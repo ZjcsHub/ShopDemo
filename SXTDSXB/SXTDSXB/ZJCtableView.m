@@ -39,8 +39,8 @@
     if (self =[super initWithFrame:frame style:style]) {
         self.delegate =self;
         self.dataSource =self;
-//        [self.datalist addObjectsFromArray:@[@"我的优惠劵",@"邀请好友,一块赚钱"]];
-//        [self.imageArray addObjectsFromArray:@[[UIImage imageNamed:@"我的界面我的优惠券图标"],[UIImage imageNamed:@"我的界面邀请好友图标"]]];
+        [self.datalist addObjectsFromArray:@[@"我的优惠劵",@"邀请好友,一块赚钱"]];
+        [self.imageArray addObjectsFromArray:@[[UIImage imageNamed:@"我的界面我的优惠券图标"],[UIImage imageNamed:@"我的界面邀请好友图标"]]];
     }
     return self;
 }
@@ -76,6 +76,8 @@
     }
     return cell;
 }
+
+
 
 
 @end

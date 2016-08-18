@@ -58,7 +58,6 @@
     if (!_longin) {
         _longin =[UIButton buttonWithType:UIButtonTypeSystem];
         [_longin setTitle:@"登录" forState:UIControlStateNormal];
-        [_longin addTarget:self action:@selector(doAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _longin;
 }
@@ -67,22 +66,18 @@
     if (!_zhuce) {
         _zhuce =[UIButton buttonWithType:UIButtonTypeSystem];
         [_zhuce setTitle:@"注册" forState:UIControlStateNormal];
+        [_zhuce addTarget:self action:@selector(pushnextController) forControlEvents:UIControlEventTouchUpInside];
     }
     return _zhuce;
 }
 
-
-- (id)forwardingTargetForSelector:(SEL)aSelector {
-    
-    
-    if (aSelector == @selector(doAction)) {
-        
-        return  [[ZJCFourthViewController alloc] init];
-        
+- (void)pushnextController{
+    if (_pushblock) {
+        _pushblock();
     }
-    
-    return nil;
+   
 }
+
 
 
 @end
