@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		070F4B131D6589240004DBD9 /* ZJCRegistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B121D6589240004DBD9 /* ZJCRegistView.m */; };
 		070F4B161D6589380004DBD9 /* ZJCThreeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B151D6589380004DBD9 /* ZJCThreeButton.m */; };
+		070F4B1B1D65AB460004DBD9 /* ZJCPhonetest.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */; };
+		070F4B1F1D65AB7E0004DBD9 /* ZJCPhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B1E1D65AB7E0004DBD9 /* ZJCPhoneView.m */; };
 		0779D9231D6543E4008E78AD /* ZJCLandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0779D9221D6543E4008E78AD /* ZJCLandView.m */; };
 		07D746391D63F76A00966A7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D746381D63F76A00966A7B /* main.m */; };
 		07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D7463B1D63F76A00966A7B /* AppDelegate.m */; };
@@ -52,6 +54,10 @@
 		070F4B121D6589240004DBD9 /* ZJCRegistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCRegistView.m; sourceTree = "<group>"; };
 		070F4B141D6589380004DBD9 /* ZJCThreeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCThreeButton.h; sourceTree = "<group>"; };
 		070F4B151D6589380004DBD9 /* ZJCThreeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCThreeButton.m; sourceTree = "<group>"; };
+		070F4B191D65AB460004DBD9 /* ZJCPhonetest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCPhonetest.h; sourceTree = "<group>"; };
+		070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCPhonetest.m; sourceTree = "<group>"; };
+		070F4B1D1D65AB7E0004DBD9 /* ZJCPhoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCPhoneView.h; sourceTree = "<group>"; };
+		070F4B1E1D65AB7E0004DBD9 /* ZJCPhoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCPhoneView.m; sourceTree = "<group>"; };
 		0779D9211D6543E4008E78AD /* ZJCLandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCLandView.h; sourceTree = "<group>"; };
 		0779D9221D6543E4008E78AD /* ZJCLandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCLandView.m; sourceTree = "<group>"; };
 		07D746341D63F76A00966A7B /* SXTDSXB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXTDSXB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,10 +134,8 @@
 		070F4B0E1D6588C20004DBD9 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				070F4B111D6589240004DBD9 /* ZJCRegistView.h */,
-				070F4B121D6589240004DBD9 /* ZJCRegistView.m */,
-				070F4B141D6589380004DBD9 /* ZJCThreeButton.h */,
-				070F4B151D6589380004DBD9 /* ZJCThreeButton.m */,
+				070F4B201D65AB840004DBD9 /* 手机验证视图 */,
+				070F4B1C1D65AB580004DBD9 /* 注册界面视图 */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -139,8 +143,8 @@
 		070F4B0F1D6588CB0004DBD9 /* ViewControlller */ = {
 			isa = PBXGroup;
 			children = (
-				0779D9211D6543E4008E78AD /* ZJCLandView.h */,
-				0779D9221D6543E4008E78AD /* ZJCLandView.m */,
+				070F4B181D65AB240004DBD9 /* 手机验证 */,
+				070F4B171D65AB0C0004DBD9 /* 注册界面控制器 */,
 			);
 			name = ViewControlller;
 			sourceTree = "<group>";
@@ -154,6 +158,44 @@
 				07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		070F4B171D65AB0C0004DBD9 /* 注册界面控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				0779D9211D6543E4008E78AD /* ZJCLandView.h */,
+				0779D9221D6543E4008E78AD /* ZJCLandView.m */,
+			);
+			name = "注册界面控制器";
+			sourceTree = "<group>";
+		};
+		070F4B181D65AB240004DBD9 /* 手机验证 */ = {
+			isa = PBXGroup;
+			children = (
+				070F4B191D65AB460004DBD9 /* ZJCPhonetest.h */,
+				070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */,
+			);
+			name = "手机验证";
+			sourceTree = "<group>";
+		};
+		070F4B1C1D65AB580004DBD9 /* 注册界面视图 */ = {
+			isa = PBXGroup;
+			children = (
+				070F4B111D6589240004DBD9 /* ZJCRegistView.h */,
+				070F4B121D6589240004DBD9 /* ZJCRegistView.m */,
+				070F4B141D6589380004DBD9 /* ZJCThreeButton.h */,
+				070F4B151D6589380004DBD9 /* ZJCThreeButton.m */,
+			);
+			name = "注册界面视图";
+			sourceTree = "<group>";
+		};
+		070F4B201D65AB840004DBD9 /* 手机验证视图 */ = {
+			isa = PBXGroup;
+			children = (
+				070F4B1D1D65AB7E0004DBD9 /* ZJCPhoneView.h */,
+				070F4B1E1D65AB7E0004DBD9 /* ZJCPhoneView.m */,
+			);
+			name = "手机验证视图";
 			sourceTree = "<group>";
 		};
 		0779D9201D6543B6008E78AD /* 注册 */ = {
@@ -572,6 +614,7 @@
 				07E5EE761D64657A00E2E9F1 /* ZJCTableViewCell.m in Sources */,
 				07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */,
 				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,
+				070F4B1F1D65AB7E0004DBD9 /* ZJCPhoneView.m in Sources */,
 				070F4B131D6589240004DBD9 /* ZJCRegistView.m in Sources */,
 				07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */,
 				07E5EE6E1D64544400E2E9F1 /* ZJCNavViewController.m in Sources */,
@@ -581,6 +624,7 @@
 				07E5EE7C1D64798900E2E9F1 /* ZJCtableView.m in Sources */,
 				07D7466C1D6439ED00966A7B /* ZJCTimeViewController.m in Sources */,
 				07E5EE791D646C7300E2E9F1 /* ZJCHeaderView.m in Sources */,
+				070F4B1B1D65AB460004DBD9 /* ZJCPhonetest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

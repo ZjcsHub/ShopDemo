@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^phoneBlock)(NSDictionary * dict);
 @interface ZJCRegistView : UIView
+
+@property (nonatomic, copy) phoneBlock block;
 
 @end

@@ -142,7 +142,7 @@
         [_nextBtn setTitleColor:[UIColor colorWithRed:0.58 green:0.58 blue:0.58 alpha:1.00] forState:(UIControlStateNormal)];
         
         _nextBtn.userInteractionEnabled =NO;
-        
+        [_nextBtn addTarget:self action:@selector(pushToPhoneController) forControlEvents:UIControlEventTouchUpInside];
     }
     return _nextBtn;
 }
@@ -155,6 +155,12 @@
         _goLoginBtn.backgroundColor = MainColor;
     }
     return _goLoginBtn;
+}
+
+- (void)pushToPhoneController{
+    if (_block) {
+        _block(@{@"username":_userNameText.text,@"password":_passwordText.text});
+    }
 }
 
 #pragma mark - textfileDelegate

@@ -9,6 +9,7 @@
 #import "ZJCLandView.h"
 #import "ZJCRegistView.h"
 #import "ZJCThreeButton.h"
+#import "ZJCPhonetest.h"
 @interface ZJCLandView ()<UITextFieldDelegate>
 
 @property (nonatomic, strong) ZJCRegistView * regisView;
@@ -42,6 +43,12 @@
 -(ZJCRegistView *)regisView{
     if (!_regisView) {
         _regisView =[[ZJCRegistView alloc] init];
+        __weak typeof (self) weakself =self;
+        _regisView.block =^(NSDictionary * dict){
+            ZJCPhonetest * test =[[ZJCPhonetest alloc] init];
+            test.usermessage =dict;
+            [weakself.navigationController pushViewController:test animated:YES];
+        };
     }
     return _regisView;
 }
