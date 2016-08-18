@@ -7,8 +7,10 @@
 //
 
 #import "ZJCPhonetest.h"
-
+#import "ZJCPhoneView.h"
 @interface ZJCPhonetest ()
+
+@property (nonatomic, strong) ZJCPhoneView * phoneview;
 
 @end
 
@@ -17,7 +19,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =MainColor;
-    ZJCLog(@"%@",_usermessage);
+    self.edgesForExtendedLayout =0;
+    [self.view addSubview:self.phoneview];
+    __weak typeof (self) weakself =self;
+    [_phoneview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(weakself.view);
+        make.height.equalTo(@200);
+    }];
+    
+}
+
+- (ZJCPhoneView *)phoneview{
+    if (!_phoneview) {
+        _phoneview = [[ZJCPhoneView alloc] init];
+    }
+    return _phoneview;
 }
 
 - (void)didReceiveMemoryWarning {
