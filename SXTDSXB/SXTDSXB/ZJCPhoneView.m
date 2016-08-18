@@ -7,11 +7,12 @@
 //
 
 #import "ZJCPhoneView.h"
+#import "ZJCPhonetest.h"
 #define number 5
 static NSInteger num =number;
 @interface ZJCPhoneView ()<UITextFieldDelegate>
 
-@property (nonatomic, strong) UILabel * headerlabel;
+
 
 @property (nonatomic, strong) UILabel * backlabel;
 
@@ -118,13 +119,7 @@ static NSInteger num =number;
     if (!_headerlabel) {
         _headerlabel =[[UILabel alloc] init];
         _headerlabel.backgroundColor =MainColor;
-        NSString * string = @"验证码已发送到 +86";
-        NSMutableAttributedString * attstring =[[NSMutableAttributedString alloc] initWithString:string];
-        NSDictionary * dict =@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName:[UIColor colorWithRed:0.00 green:0.72 blue:0.97 alpha:1.00]};
-        NSRange range =[string rangeOfString:@"+86"];
-        [attstring addAttributes:dict range:range];
-        _headerlabel.attributedText =attstring;
-        _headerlabel.font =[UIFont systemFontOfSize:14];
+     
     }
     return _headerlabel;
 }
@@ -169,7 +164,7 @@ static NSInteger num =number;
         [_clinkbutton setTitle:@"注册" forState:UIControlStateNormal];
         [_clinkbutton setBackgroundColor:[UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1.00]];
         [_clinkbutton setTitleColor:[UIColor colorWithRed:0.59 green:0.59 blue:0.59 alpha:1.00] forState:UIControlStateSelected];
-        
+        [_clinkbutton addTarget:self action:@selector(pushNumber) forControlEvents:UIControlEventTouchUpInside];
         _clinkbutton.userInteractionEnabled =NO;
     }
     return _clinkbutton;
@@ -194,6 +189,10 @@ static NSInteger num =number;
          [_clinkbutton setBackgroundColor:[UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1.00]];
         _clinkbutton.userInteractionEnabled =NO;
     }
+}
+
+-(void)pushNumber{
+   
 }
 
 

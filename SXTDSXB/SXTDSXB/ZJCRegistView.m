@@ -195,12 +195,6 @@
     return YES;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    if (textField == _userNameText) {
-        
-
-    }
-}
 
 - (void)nametextchange:(UITextField *)textfile{
     if (textfile.text.length>10 && _passwordText.text.length>5) {

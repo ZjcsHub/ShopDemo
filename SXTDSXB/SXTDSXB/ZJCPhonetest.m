@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =MainColor;
+    [self getMessage];
     self.edgesForExtendedLayout =0;
     [self.view addSubview:self.phoneview];
     __weak typeof (self) weakself =self;
@@ -32,8 +33,25 @@
 - (ZJCPhoneView *)phoneview{
     if (!_phoneview) {
         _phoneview = [[ZJCPhoneView alloc] init];
+        NSString * telestring = self.usermessage[@"username"];
+        NSString * string = [@"验证码已发送到 +" stringByAppendingString:telestring];
+        NSMutableAttributedString * attstring =[[NSMutableAttributedString alloc] initWithString:string];
+        NSDictionary * dict =@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName:[UIColor colorWithRed:0.00 green:0.72 blue:0.97 alpha:1.00]};
+        NSRange range =[string rangeOfString:telestring];
+        [attstring addAttributes:dict range:range];
+        _phoneview.headerlabel.attributedText =attstring;
+        _phoneview.headerlabel.font =[UIFont systemFontOfSize:14];
     }
     return _phoneview;
+}
+
+- (void)getMessage{
+    NSString * username = [self.usermessage objectForKey:@"username"];
+    [HttpTool postWithPath:@"appMember/createCode.do" params:@{@"MemberId":username} success:^(id json) {
+        ZJCLog(@"%@",json);
+    } failure:^(NSError *error) {
+        ZJCLog(@"%@",error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

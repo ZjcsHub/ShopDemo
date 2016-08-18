@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070DD58E1D65EB51001925AC /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 070DD58D1D65EB51001925AC /* HttpTool.m */; };
 		070F4B131D6589240004DBD9 /* ZJCRegistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B121D6589240004DBD9 /* ZJCRegistView.m */; };
 		070F4B161D6589380004DBD9 /* ZJCThreeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B151D6589380004DBD9 /* ZJCThreeButton.m */; };
 		070F4B1B1D65AB460004DBD9 /* ZJCPhonetest.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070DD58C1D65EB51001925AC /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		070DD58D1D65EB51001925AC /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		070F4B111D6589240004DBD9 /* ZJCRegistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCRegistView.h; sourceTree = "<group>"; };
 		070F4B121D6589240004DBD9 /* ZJCRegistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCRegistView.m; sourceTree = "<group>"; };
 		070F4B141D6589380004DBD9 /* ZJCThreeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCThreeButton.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 			children = (
 				07D7463A1D63F76A00966A7B /* AppDelegate.h */,
 				07D7463B1D63F76A00966A7B /* AppDelegate.m */,
+				070DD58C1D65EB51001925AC /* HttpTool.h */,
+				070DD58D1D65EB51001925AC /* HttpTool.m */,
 				070F4B101D6588EA0004DBD9 /* Tools */,
 				0779D9201D6543B6008E78AD /* 注册 */,
 				07E5EE6F1D6458CA00E2E9F1 /* 限时购 */,
@@ -611,6 +616,7 @@
 			files = (
 				07D746721D643A3B00966A7B /* ZJCThirdViewController.m in Sources */,
 				0779D9231D6543E4008E78AD /* ZJCLandView.m in Sources */,
+				070DD58E1D65EB51001925AC /* HttpTool.m in Sources */,
 				07E5EE761D64657A00E2E9F1 /* ZJCTableViewCell.m in Sources */,
 				07D746751D643A4600966A7B /* ZJCFourthViewController.m in Sources */,
 				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,

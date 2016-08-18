@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ZJCPhoneView : UIView
-
+@property (nonatomic, strong) UILabel * headerlabel;
 @end
