@@ -89,6 +89,7 @@
     if (!_qqLoginBtn) {
         _qqLoginBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_qqLoginBtn setImage:[UIImage imageNamed:@"登录界面qq登陆"] forState:(UIControlStateNormal)];
+        [_qqLoginBtn addTarget:self action:@selector(loginStype:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _qqLoginBtn;
 }
@@ -97,6 +98,7 @@
     if (!_WXLoginBtn) {
         _WXLoginBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_WXLoginBtn setImage:[UIImage imageNamed:@"登录界面微信登录"] forState:(UIControlStateNormal)];
+        [_WXLoginBtn addTarget:self action:@selector(loginStype:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _WXLoginBtn;
 }
@@ -105,6 +107,7 @@
     if (!_sinaLoginBtn) {
         _sinaLoginBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_sinaLoginBtn setImage:[UIImage imageNamed:@"登陆界面微博登录"] forState:(UIControlStateNormal)];
+        [_sinaLoginBtn addTarget:self action:@selector(loginStype:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sinaLoginBtn;
 }
@@ -117,6 +120,21 @@
     return _lineLabel;
 }
 
+- (void)loginStype:(UIButton *)button{
+    if (button == _qqLoginBtn) {
+        if (_block) {
+            _block(UMShareToQQ);
+        }
+    }else if (button == _WXLoginBtn){
+        if (_block) {
+            _block(UMShareToWechatSession);
+        }
+    }else if (button == _sinaLoginBtn){
+        if (_block) {
+            _block(UMShareToSina);
+        }
+    }
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

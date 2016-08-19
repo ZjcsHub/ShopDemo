@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void (^QQloginBlock)(NSString *const string);
 
 @interface ZJCThreeButton : UIView
+
+@property (nonatomic,copy) QQloginBlock block;
 
 @end
