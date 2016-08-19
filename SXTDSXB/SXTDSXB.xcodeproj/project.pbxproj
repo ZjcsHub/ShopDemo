@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070DD58E1D65EB51001925AC /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 070DD58D1D65EB51001925AC /* HttpTool.m */; };
+		070DD5931D66B66F001925AC /* UIImageView+SDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 070DD5921D66B66F001925AC /* UIImageView+SDWebImage.m */; };
 		070F4B131D6589240004DBD9 /* ZJCRegistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B121D6589240004DBD9 /* ZJCRegistView.m */; };
 		070F4B161D6589380004DBD9 /* ZJCThreeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B151D6589380004DBD9 /* ZJCThreeButton.m */; };
 		070F4B1B1D65AB460004DBD9 /* ZJCPhonetest.m in Sources */ = {isa = PBXBuildFile; fileRef = 070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		070DD58C1D65EB51001925AC /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		070DD58D1D65EB51001925AC /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		070DD5911D66B66F001925AC /* UIImageView+SDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImage.h"; sourceTree = "<group>"; };
+		070DD5921D66B66F001925AC /* UIImageView+SDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImage.m"; sourceTree = "<group>"; };
 		070F4B111D6589240004DBD9 /* ZJCRegistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCRegistView.h; sourceTree = "<group>"; };
 		070F4B121D6589240004DBD9 /* ZJCRegistView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCRegistView.m; sourceTree = "<group>"; };
 		070F4B141D6589380004DBD9 /* ZJCThreeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCThreeButton.h; sourceTree = "<group>"; };
@@ -134,10 +137,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070DD58F1D66B63F001925AC /* 网络请求工具 */ = {
+			isa = PBXGroup;
+			children = (
+				070DD58C1D65EB51001925AC /* HttpTool.h */,
+				070DD58D1D65EB51001925AC /* HttpTool.m */,
+			);
+			name = "网络请求工具";
+			sourceTree = "<group>";
+		};
+		070DD5901D66B656001925AC /* 加载网络图片工具 */ = {
+			isa = PBXGroup;
+			children = (
+				070DD5911D66B66F001925AC /* UIImageView+SDWebImage.h */,
+				070DD5921D66B66F001925AC /* UIImageView+SDWebImage.m */,
+			);
+			name = "加载网络图片工具";
+			sourceTree = "<group>";
+		};
+		070DD5941D66B724001925AC /* Tabbar+Navgation */ = {
+			isa = PBXGroup;
+			children = (
+				07D746761D643F5000966A7B /* ZJCTabBarViewController.h */,
+				07D746771D643F5000966A7B /* ZJCTabBarViewController.m */,
+				07E5EE6C1D64544400E2E9F1 /* ZJCNavViewController.h */,
+				07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */,
+			);
+			name = "Tabbar+Navgation";
+			sourceTree = "<group>";
+		};
 		070F4B0E1D6588C20004DBD9 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				070F4B201D65AB840004DBD9 /* 下一步 */,
+				070F4B201D65AB840004DBD9 /* 发送验证码视图 */,
 				070F4B1C1D65AB580004DBD9 /* 注册界面视图 */,
 			);
 			name = view;
@@ -146,7 +178,7 @@
 		070F4B0F1D6588CB0004DBD9 /* ViewControlller */ = {
 			isa = PBXGroup;
 			children = (
-				070F4B181D65AB240004DBD9 /* 下一步 */,
+				070F4B181D65AB240004DBD9 /* 发送验证码视图控制器 */,
 				070F4B171D65AB0C0004DBD9 /* 注册界面控制器 */,
 			);
 			name = ViewControlller;
@@ -155,10 +187,9 @@
 		070F4B101D6588EA0004DBD9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				07D746761D643F5000966A7B /* ZJCTabBarViewController.h */,
-				07D746771D643F5000966A7B /* ZJCTabBarViewController.m */,
-				07E5EE6C1D64544400E2E9F1 /* ZJCNavViewController.h */,
-				07E5EE6D1D64544400E2E9F1 /* ZJCNavViewController.m */,
+				070DD5941D66B724001925AC /* Tabbar+Navgation */,
+				070DD5901D66B656001925AC /* 加载网络图片工具 */,
+				070DD58F1D66B63F001925AC /* 网络请求工具 */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -172,13 +203,13 @@
 			name = "注册界面控制器";
 			sourceTree = "<group>";
 		};
-		070F4B181D65AB240004DBD9 /* 下一步 */ = {
+		070F4B181D65AB240004DBD9 /* 发送验证码视图控制器 */ = {
 			isa = PBXGroup;
 			children = (
 				070F4B191D65AB460004DBD9 /* ZJCPhonetest.h */,
 				070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */,
 			);
-			name = "下一步";
+			name = "发送验证码视图控制器";
 			sourceTree = "<group>";
 		};
 		070F4B1C1D65AB580004DBD9 /* 注册界面视图 */ = {
@@ -192,13 +223,13 @@
 			name = "注册界面视图";
 			sourceTree = "<group>";
 		};
-		070F4B201D65AB840004DBD9 /* 下一步 */ = {
+		070F4B201D65AB840004DBD9 /* 发送验证码视图 */ = {
 			isa = PBXGroup;
 			children = (
 				070F4B1D1D65AB7E0004DBD9 /* ZJCPhoneView.h */,
 				070F4B1E1D65AB7E0004DBD9 /* ZJCPhoneView.m */,
 			);
-			name = "下一步";
+			name = "发送验证码视图";
 			sourceTree = "<group>";
 		};
 		0779D9201D6543B6008E78AD /* 注册 */ = {
@@ -237,8 +268,6 @@
 			children = (
 				07D7463A1D63F76A00966A7B /* AppDelegate.h */,
 				07D7463B1D63F76A00966A7B /* AppDelegate.m */,
-				070DD58C1D65EB51001925AC /* HttpTool.h */,
-				070DD58D1D65EB51001925AC /* HttpTool.m */,
 				070F4B101D6588EA0004DBD9 /* Tools */,
 				0779D9201D6543B6008E78AD /* 注册 */,
 				07E5EE6F1D6458CA00E2E9F1 /* 限时购 */,
@@ -622,6 +651,7 @@
 				07D746781D643F5000966A7B /* ZJCTabBarViewController.m in Sources */,
 				070F4B1F1D65AB7E0004DBD9 /* ZJCPhoneView.m in Sources */,
 				070F4B131D6589240004DBD9 /* ZJCRegistView.m in Sources */,
+				070DD5931D66B66F001925AC /* UIImageView+SDWebImage.m in Sources */,
 				07D7463C1D63F76A00966A7B /* AppDelegate.m in Sources */,
 				07E5EE6E1D64544400E2E9F1 /* ZJCNavViewController.m in Sources */,
 				070F4B161D6589380004DBD9 /* ZJCThreeButton.m in Sources */,

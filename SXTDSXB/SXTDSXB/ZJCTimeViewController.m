@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    ZJCLog(@"%@",self.title);
     // Do any additional setup after loading the view.
 }
 

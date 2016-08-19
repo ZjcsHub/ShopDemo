@@ -8,6 +8,7 @@
 
 #import "ZJCPhonetest.h"
 #import "ZJCPhoneView.h"
+
 @interface ZJCPhonetest ()
 
 @property (nonatomic, strong) ZJCPhoneView * phoneview;
@@ -18,18 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title =@"验证手机号";
     self.view.backgroundColor =MainColor;
-    [self getMessage];
     self.edgesForExtendedLayout =0;
     [self.view addSubview:self.phoneview];
+    [self makeConstraint];
+//    [self getMessage];
+}
+#pragma mark - 添加视图约束
+- (void)makeConstraint{
     __weak typeof (self) weakself =self;
     [_phoneview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(weakself.view);
         make.height.equalTo(@200);
     }];
-    
 }
 
+#pragma mark - 懒加载
 - (ZJCPhoneView *)phoneview{
     if (!_phoneview) {
         _phoneview = [[ZJCPhoneView alloc] init];
@@ -41,17 +47,42 @@
         [attstring addAttributes:dict range:range];
         _phoneview.headerlabel.attributedText =attstring;
         _phoneview.headerlabel.font =[UIFont systemFontOfSize:14];
+        [_phoneview.timebutton addTarget:self action:@selector(tryAgain) forControlEvents:UIControlEventTouchUpInside];
+        __weak typeof (self) weakself =self;
+        _phoneview.pushBlock=^(NSString * code){
+            //注册网络请求
+            [weakself registerController:code];
+        };
     }
     return _phoneview;
 }
 
+- (void)tryAgain{
+    [self getMessage];
+    ZJCLog(@"hh");
+}
+
+
+#pragma mark - 获取验证码信息
 - (void)getMessage{
+    [SVProgressHUD show];
     NSString * username = [self.usermessage objectForKey:@"username"];
     [HttpTool postWithPath:@"appMember/createCode.do" params:@{@"MemberId":username} success:^(id json) {
+        [SVProgressHUD dismiss];
         ZJCLog(@"%@",json);
         [self.phoneview createTimer];
     } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
         ZJCLog(@"%@",error);
+    }];
+}
+
+- (void)registerController:(NSString *)code{
+    [SVProgressHUD show];
+    [HttpTool getWithPath:@"appMember/appRegistration.do" params:@{@"LoginName":[self.usermessage objectForKey:@"username"],@"Lpassword":[self.usermessage objectForKey:@"password"],@"Code":code,@"Telephone":[self.usermessage objectForKey:@"username"]} success:^(id json) {
+        [SVProgressHUD dismiss];
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
     }];
 }
 
@@ -59,15 +90,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

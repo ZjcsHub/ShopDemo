@@ -1,10 +1,3 @@
-//
-//  HttpTool.m
-//  05-二次封装AFN
-//
-//  Created by 大欢 on 16/8/4.
-//  Copyright © 2016年 大欢. All rights reserved.
-//
 
 #import "HttpTool.h"
 #import "AFNetworking/AFNetworking.h"

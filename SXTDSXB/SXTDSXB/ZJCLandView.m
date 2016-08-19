@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"注册";
     self.view.backgroundColor = MainColor;
     self.edgesForExtendedLayout = 0;
    

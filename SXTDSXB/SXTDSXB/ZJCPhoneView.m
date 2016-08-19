@@ -16,8 +16,6 @@ static NSInteger num =number;
 
 @property (nonatomic, strong) UILabel * backlabel;
 
-@property (nonatomic, strong) UIButton * timebutton;
-
 @property (nonatomic, strong) UITextField * numberfile;
 
 @property (nonatomic ,strong) UIButton * clinkbutton;
@@ -152,7 +150,7 @@ static NSInteger num =number;
 - (UIButton *)timebutton{
     if (!_timebutton) {
         _timebutton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_timebutton addTarget:self action:@selector(tryAgain) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return _timebutton;
 }
@@ -176,9 +174,6 @@ static NSInteger num =number;
     return _clinkbutton;
 }
 
-- (void)tryAgain{
-    [self createTimer];
-}
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     if (range.location > 5) {
@@ -197,9 +192,10 @@ static NSInteger num =number;
     }
 }
 
--(void)pushNumber{
-   
+- (void)pushNumber{
+    if (_pushBlock) {
+        _pushBlock(self.numberfile.text);
+    }
 }
-
 
 @end

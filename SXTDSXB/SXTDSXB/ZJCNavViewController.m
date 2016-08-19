@@ -16,10 +16,26 @@
 
 +(void)initialize{
     UINavigationBar * navbar =[UINavigationBar appearance];
-    
-//    [navbar setBackgroundImage:[UIImage imageNamed:@"nav_backImage"] forBarMetrics:UIBarMetricsDefault];
-//    [navbar setBarTintColor:[UIColor orangeColor]];
-    [navbar setBackgroundColor:[UIColor orangeColor]];
+    [navbar setBackgroundImage:[UIImage imageNamed:@"nav_backImage"] forBarMetrics:UIBarMetricsDefault];
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.childViewControllers.count) {
+        UIButton * button =[UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:[UIImage imageNamed:@"详情界面返回按钮"] forState:UIControlStateNormal];
+        
+        [button addTarget:self action:@selector(returnlastController) forControlEvents:UIControlEventTouchUpInside];
+//        button.frame = CGRectMake(0, 0, 30, 30);
+       
+        viewController.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:button];
+        [button sizeToFit];
+        viewController.hidesBottomBarWhenPushed =YES;
+    }
+    [super pushViewController:viewController animated:YES];
+}
+
+- (void)returnlastController{
+    [self popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {

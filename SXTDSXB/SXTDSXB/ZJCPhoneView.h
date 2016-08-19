@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^PushnumberBlock)(NSString * code);
+
 @interface ZJCPhoneView : UIView
 @property (nonatomic, strong) UILabel * headerlabel;
+@property (nonatomic, strong) UIButton * timebutton;
+@property (nonatomic, copy) PushnumberBlock pushBlock;
 - (void)createTimer;
 @end

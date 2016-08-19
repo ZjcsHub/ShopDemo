@@ -31,5 +31,6 @@
 #import <Masonry.h>
 #import <objc/runtime.h>
 #import "HttpTool.h"
-
+#import "UIImageView+SDWebImage.h"
+#import <SVProgressHUD.h>
 #endif /* ZJCHeader_pch */
