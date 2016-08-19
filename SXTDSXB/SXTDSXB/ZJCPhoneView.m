@@ -40,7 +40,7 @@ static NSInteger num =number;
         [self addSubview:self.linelabel];
         [self addSubview:self.timebutton];
         [self addSubview:self.clinkbutton];
-        [self createTimer];
+        
     }
     return self;
 }

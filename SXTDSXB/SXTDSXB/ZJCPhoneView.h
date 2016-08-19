@@ -10,4 +10,5 @@
 
 @interface ZJCPhoneView : UIView
 @property (nonatomic, strong) UILabel * headerlabel;
+- (void)createTimer;
 @end

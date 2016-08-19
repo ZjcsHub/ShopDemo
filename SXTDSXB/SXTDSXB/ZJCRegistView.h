@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 typedef void (^phoneBlock)(NSDictionary * dict);
 
-typedef void (^AlertBlock)(UIAlertController * alert);
 @interface ZJCRegistView : UIView
 
 @property (nonatomic, copy) phoneBlock block;
-@property (nonatomic, copy) AlertBlock alertblock;
 
 @end

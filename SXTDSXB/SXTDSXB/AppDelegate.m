@@ -22,6 +22,7 @@
     
     ZJCTabBarViewController * tabbar =[[ZJCTabBarViewController alloc] init];
     tabbar.selectedIndex =3;
+   
     self.window.rootViewController =tabbar;
     [self.window makeKeyAndVisible];
     

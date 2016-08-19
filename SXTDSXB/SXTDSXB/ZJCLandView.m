@@ -49,14 +49,6 @@
             test.usermessage =dict;
             [weakself.navigationController pushViewController:test animated:YES];
         };
-        
-        _regisView.alertblock=^(UIAlertController * alert){
-          [weakself presentViewController:alert animated:YES completion:^{
-              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                  [alert dismissViewControllerAnimated:YES completion:nil];
-              });
-          }];
-        };
     }
     return _regisView;
 }

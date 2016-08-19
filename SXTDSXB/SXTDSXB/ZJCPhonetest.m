@@ -49,6 +49,7 @@
     NSString * username = [self.usermessage objectForKey:@"username"];
     [HttpTool postWithPath:@"appMember/createCode.do" params:@{@"MemberId":username} success:^(id json) {
         ZJCLog(@"%@",json);
+        [self.phoneview createTimer];
     } failure:^(NSError *error) {
         ZJCLog(@"%@",error);
     }];

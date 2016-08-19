@@ -186,29 +186,6 @@
     return YES;
 }
 
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (textField == _passwordText) {
-        NSString * telNumber =_userNameText.text;
-        //正则表达式
-        NSString *pattern = @"\\d{3}-\\d{8}|\\d{3}-\\d{7}|\\d{4}-\\d{8}|\\d{4}-\\d{7}|1+[358]+\\d{9}|\\d{8}|\\d{7}";
-        
-        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
-        
-        //根据谓词对象判断正则表达式
-        BOOL isMatch = [pred evaluateWithObject:telNumber];
-        
-        if (isMatch) {
-           
-            return YES;
-        } else {
-        UIAlertController * alertcontroller = [UIAlertController alertControllerWithTitle:@"警告" message:@"请输入正确的手机号" preferredStyle:UIAlertControllerStyleAlert];
-        self.alertblock(alertcontroller);
-            return NO;
-        }
-
-    }
-    return YES;
-}
 
 
 - (void)nametextchange:(UITextField *)textfile{
