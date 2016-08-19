@@ -33,8 +33,8 @@
 - (ZJCPhoneView *)phoneview{
     if (!_phoneview) {
         _phoneview = [[ZJCPhoneView alloc] init];
-        NSString * telestring = self.usermessage[@"username"];
-        NSString * string = [@"验证码已发送到 +" stringByAppendingString:telestring];
+        NSString * telestring = [NSString stringWithFormat:@" +86%@",self.usermessage[@"username"]];
+        NSString * string = [@"验证码已发送到" stringByAppendingString:telestring];
         NSMutableAttributedString * attstring =[[NSMutableAttributedString alloc] initWithString:string];
         NSDictionary * dict =@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName:[UIColor colorWithRed:0.00 green:0.72 blue:0.97 alpha:1.00]};
         NSRange range =[string rangeOfString:telestring];

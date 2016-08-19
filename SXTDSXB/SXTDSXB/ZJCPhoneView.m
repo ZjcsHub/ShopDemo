@@ -49,23 +49,29 @@ static NSInteger num =number;
     _timebutton.userInteractionEnabled =NO;
     NSDictionary * dict =@{NSFontAttributeName:[UIFont systemFontOfSize:14]};
     NSDictionary * dict1 =@{NSForegroundColorAttributeName:[UIColor colorWithRed:0.00 green:0.72 blue:0.97 alpha:1.00]};
-       NSAttributedString * attbutString =[[NSAttributedString alloc] initWithString:@"请重试" attributes:dict];
+       NSAttributedString * attbutString =[[NSAttributedString alloc] initWithString:@"请重试" attributes:dict1];
     
 
-    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 1 * NSEC_PER_SEC);
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0* NSEC_PER_SEC);
     dispatch_source_set_event_handler(self.timer, ^{
     NSString * numstring = [[NSString stringWithFormat:@"%ld",num] stringByAppendingString:@"秒后重试"];
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:numstring attributes:dict];
     NSRange range =[numstring rangeOfString:[NSString stringWithFormat:@"%ld",num]];
     [string addAttributes:dict1 range:range];
-    [_timebutton setAttributedTitle:string forState:UIControlStateNormal];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_timebutton setAttributedTitle:string forState:UIControlStateNormal];
+        });
+    
         num--;
         if (num==0) {
             dispatch_source_cancel(self.timer);
             self.timer =nil;
             num = number;
-            [_timebutton setAttributedTitle:attbutString forState:UIControlStateNormal];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_timebutton setAttributedTitle:attbutString forState:UIControlStateNormal];
+            });
+            
             _timebutton.userInteractionEnabled =YES;
         }
         

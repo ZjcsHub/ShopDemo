@@ -17,7 +17,7 @@
 
 @property (strong, nonatomic)   UILabel *textBackLabel;              /** 输入框背景图 */
 @property (strong, nonatomic)   UILabel *textLineLabel;              /** text中间的分割线 */
-
+@property (strong, nonatomic)   NSUserDefaults * user;           /*用户偏好设置*/
 @end
 
 
@@ -111,6 +111,9 @@
         _userNameText.delegate = self;
         _userNameText.placeholder = @"请输入手机号码";
         [_userNameText addTarget:self action:@selector(nametextchange:) forControlEvents:UIControlEventEditingChanged];
+        if ([self.user valueForKey:@"username"]) {
+            _userNameText.text = [self.user valueForKey:@"username"];
+        }
     }
     return _userNameText;
 }
@@ -156,11 +159,23 @@
     }
     return _goLoginBtn;
 }
+- (NSUserDefaults *)user{
+    if (!_user) {
+        _user = [NSUserDefaults standardUserDefaults];
+    }
+    return _user;
+}
 
 - (void)pushToPhoneController{
     if (_block) {
         _block(@{@"username":_userNameText.text,@"password":_passwordText.text});
     }
+    if (![[self.user objectForKey:@"username"] isEqualToString:_userNameText.text]) {
+        [self.user setObject:_userNameText.text forKey:@"username"];
+        [self.user synchronize];
+    }
+    
+    
 }
 
 #pragma mark - textfileDelegate

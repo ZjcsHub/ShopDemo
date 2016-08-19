@@ -137,7 +137,7 @@
 		070F4B0E1D6588C20004DBD9 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				070F4B201D65AB840004DBD9 /* 手机验证视图 */,
+				070F4B201D65AB840004DBD9 /* 下一步 */,
 				070F4B1C1D65AB580004DBD9 /* 注册界面视图 */,
 			);
 			name = view;
@@ -146,7 +146,7 @@
 		070F4B0F1D6588CB0004DBD9 /* ViewControlller */ = {
 			isa = PBXGroup;
 			children = (
-				070F4B181D65AB240004DBD9 /* 手机验证 */,
+				070F4B181D65AB240004DBD9 /* 下一步 */,
 				070F4B171D65AB0C0004DBD9 /* 注册界面控制器 */,
 			);
 			name = ViewControlller;
@@ -172,13 +172,13 @@
 			name = "注册界面控制器";
 			sourceTree = "<group>";
 		};
-		070F4B181D65AB240004DBD9 /* 手机验证 */ = {
+		070F4B181D65AB240004DBD9 /* 下一步 */ = {
 			isa = PBXGroup;
 			children = (
 				070F4B191D65AB460004DBD9 /* ZJCPhonetest.h */,
 				070F4B1A1D65AB460004DBD9 /* ZJCPhonetest.m */,
 			);
-			name = "手机验证";
+			name = "下一步";
 			sourceTree = "<group>";
 		};
 		070F4B1C1D65AB580004DBD9 /* 注册界面视图 */ = {
@@ -192,13 +192,13 @@
 			name = "注册界面视图";
 			sourceTree = "<group>";
 		};
-		070F4B201D65AB840004DBD9 /* 手机验证视图 */ = {
+		070F4B201D65AB840004DBD9 /* 下一步 */ = {
 			isa = PBXGroup;
 			children = (
 				070F4B1D1D65AB7E0004DBD9 /* ZJCPhoneView.h */,
 				070F4B1E1D65AB7E0004DBD9 /* ZJCPhoneView.m */,
 			);
-			name = "手机验证视图";
+			name = "下一步";
 			sourceTree = "<group>";
 		};
 		0779D9201D6543B6008E78AD /* 注册 */ = {
